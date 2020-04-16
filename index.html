@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>How to update Arkansas covid-19 map</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Copy of How to update Arkansas covid-19 map</title><style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -403,22 +403,69 @@ blockquote {
 	border-left: 3px solid rgb(55, 53, 47);
 }
 
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
 .bookmark-href {
 	font-size: 0.75em;
-	opacity: 0.5;
+	margin-top: 0.25em;
 }
 
 .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
-.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
 .pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
 
-.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
 
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
 
-.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
 
 .highlight-default {
 }
@@ -543,6 +590,16 @@ blockquote {
 .block-color-red_background {
 	background: rgb(251,228,228);
 }
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
 
 .checkbox {
 	display: inline-flex;
@@ -562,19 +619,11 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 
-</style></head><body><article id="677a97bb-fcb1-42fa-860e-2cde7ccb5ad7" class="page sans"><header><h1 class="page-title">How to update Arkansas covid-19 map</h1></header><div class="page-body"><h3 id="9007eb4d-6489-43cd-853f-b1617344f758" class="">1. Go to this <a href="https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?where=0%3D0&amp;objectIds=&amp;time=&amp;geometry=&amp;geometryType=esriGeometryEnvelope&amp;inSR=&amp;spatialRel=esriSpatialRelIntersects&amp;resultType=none&amp;distance=0.0&amp;units=esriSRUnit_Meter&amp;returnGeodetic=false&amp;outFields=*&amp;returnGeometry=false&amp;returnCentroid=false&amp;featureEncoding=esriDefault&amp;multipatchOption=xyFootprint&amp;maxAllowableOffset=&amp;geometryPrecision=&amp;outSR=&amp;datumTransformation=&amp;applyVCSProjection=false&amp;returnIdsOnly=false&amp;returnUniqueIdsOnly=false&amp;returnCountOnly=false&amp;returnExtentOnly=false&amp;returnQueryGeometry=false&amp;returnDistinctValues=false&amp;cacheHint=false&amp;orderByFields=&amp;groupByFieldsForStatistics=&amp;outStatistics=&amp;having=&amp;resultOffset=&amp;resultRecordCount=&amp;returnZ=false&amp;returnM=false&amp;returnExceededLimitFeatures=true&amp;quantizationParameters=&amp;sqlFormat=none&amp;f=pgeojson&amp;token=">data page</a>:</h3><p id="a0d64647-a04c-4967-a1eb-fa0854825e77" class="">
-</p><p id="f42b3bfc-fcba-4fc2-9e7c-18b3b1370a0a" class="block-color-blue">
-</p><h3 id="6ce69d7e-dab1-4c20-9147-d74805d955e1" class="">2. Convert json file to csv</h3><ul id="17c134ff-0b56-4f45-8ef3-260f8e97817a" class="bulleted-list"><li>That link directs you to a json file. To convert that to a csv file that we can import to datawrapper, go to: <mark class="highlight-blue"><a href="http://arkansasonline.com/json">arkansasonline.com/json/</a></mark></li></ul><ul id="4a502731-a115-4a69-8126-e7277de615df" class="bulleted-list"><li>Copy that long url and paste it into the text box</li></ul><ul id="060de530-b6d6-4b45-b756-9c160bb9c16a" class="bulleted-list"><li>Then hit &quot;DOWNLOAD CSV&quot;</li></ul><ul id="da0c58c7-741a-4a0f-a7a6-6a0a87ac1a7d" class="bulleted-list"><li>You will get a result.csv file</li></ul><p id="0925ac0a-a94f-45e9-b2ec-cd4bb9af851b" class="">
-</p><p id="99003fc8-4ecc-42c2-991b-1b585cd6b80b" class="">
-</p><h3 id="6aa793d4-a359-49fa-a101-61fba5955d91" class="">3. Import csv to Google Sheets (or open in Excel)</h3><ul id="7db76ceb-71a3-405a-a6ce-c958db4c1136" class="bulleted-list"><li>Create a new Google Sheets</li></ul><ul id="b975a580-8065-43d3-8ccc-866c5b05b660" class="bulleted-list"><li>Click File - Import - Upload and then select your result.csv file</li></ul><p id="bc53482f-f303-4494-acbd-dd2d6b22d601" class="">
-</p><p id="66c9a298-e712-4333-8e56-d07244f34718" class="">
-</p><h3 id="3cf2c05d-a73f-44da-aba4-1179a5184e73" class="">4. Working with &quot;Missing County Info&quot;</h3><ul id="871cf173-2aef-4091-9e0a-1e78dccf9f0e" class="bulleted-list"><li>The spreadsheet has a lot of columns, but the only columns that we need to use are the following three. They are the county name, number of positive cases and number of negative cases. They should be the F, I and J column respectively:</li></ul><ol id="55913745-26a8-443f-8c43-27d3359fbd04" class="block-color-orange numbered-list" start="1"><li>features__properties__county_nam</li></ol><ol id="834a5d2b-11b9-46c8-89e2-7efdf7cbd71f" class="block-color-orange numbered-list" start="2"><li>features__properties__positive</li></ol><ol id="9038df03-3695-4401-a8c8-2a8c7fb5354d" class="block-color-orange numbered-list" start="3"><li>features__properties__negative</li></ol><ul id="cfc7306a-b7dd-4bbb-8754-687869351c4d" class="bulleted-list"><li>Notice the county name cell of the first row says <mark class="highlight-orange"><strong>Missing County Info</strong></mark><strong>. </strong>Assuming that means the state department cannot identify where the cases are, we want to reflect that in our map. </li></ul><ul id="0cfbc9db-6f32-4201-bcf2-bc7e470c62a6" class="bulleted-list"><li>Go to <mark class="highlight-blue"><a href="https://www.arkansasonline.com/admin/flatpages/flatpage/6908/">the flat page</a></mark><mark class="highlight-blue"></mark>, search for "missing county information" and update the number if there is a change.</li></ul><p id="10c1c7b1-84d9-4395-b01e-c8889a69187d" class="">
-</li></ul><p id="36cf1c4b-ebce-4d4c-800f-ad4daea80283" class="">
-</p><h3 id="c3b4604d-a5a5-4041-aa84-c9bc3d474d93" class="">5. Create new positive and negative columns</h3><ul id="7fac5cf5-8bef-4aed-b605-a203a7b5d67c" class="bulleted-list"><li>Back to Google Sheets. Click on View - Freeze - 1 row. That keeps the header row fixed. </li></ul><ul id="095aafa6-02e0-46f5-8e47-a23f744c1a23" class="bulleted-list"><li>Select <mark class="highlight-orange">features__properties__positive</mark> and <mark class="highlight-orange">features__properties__negative</mark> columns, right-click and hit Insert 2 left.</li></ul><ul id="4682c7f4-e3eb-4c66-a9b0-8961c2db50dc" class="bulleted-list"><li>Copy <mark class="highlight-orange">features__properties__positive</mark> and <mark class="highlight-orange">features__properties__negative </mark>columns and paste it onto the two new columns you created. </li></ul><ul id="22d905a5-2924-4cac-a08f-e51b8b144391" class="bulleted-list"><li>Rename the two new columns to <mark class="highlight-orange">positive</mark> and <mark class="highlight-orange">negative </mark><strong>(Make sure the column names are exactly positive and negative)</strong></li></ul><ul id="814a722c-c672-492e-85e9-8b1bffddd9a9" class="bulleted-list"><li>You should end up with something like this: </li></ul><figure id="3beac354-f656-4717-acf6-48fba5404f22" class="image"><a href="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.08.13_PM.png"><img style="width:1750px" src="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.08.13_PM.png"/></a></figure><p id="87e21cc2-33f5-4f6a-b05a-82065e6be665" class="">
-</p><p id="63735e68-815f-40c6-a7c9-6810983d6e02" class="">
-</p><h3 id="4bed0cce-823d-4e12-b2af-eae4d38542ce" class="">6. Hide numbers 1-4</h3><ul id="6172365e-5315-475b-92a3-dcb8e51b1f6e" class="bulleted-list"><li>Since the state department hides cases less than 5, we have decided to do the same, which is why we need to create these two columns in the first place. </li></ul><ul id="e9f428c3-8c59-4c10-baaf-04e5870a3140" class="bulleted-list"><li>Right-click the <mark class="highlight-orange">positive</mark> column you just created and hit Sort sheet A → Z. Replace numbers 1-4 with text &quot;1-4&quot;</li></ul><ul id="be875426-4994-4490-87e9-7164ccc361ab" class="bulleted-list"><li>Do the same for the <mark class="highlight-orange">negative</mark> column. You should end up with something like this:</li></ul><figure id="9912d0db-7a0d-40a1-a9b5-5f8260c53637" class="image"><a href="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.15.52_PM.png"><img style="width:1750px" src="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.15.52_PM.png"/></a></figure><ul id="ad9c1213-d8db-4ae8-bef5-7eb741a11e91" class="bulleted-list"><li>Hit File - Download - csv</li></ul><p id="0500a827-308c-4a2c-922e-ed2f234487aa" class="">
-</p><p id="61e58e44-3bce-4573-b9ef-3be8047ea09e" class="">
-</p><h3 id="eea76f66-a30b-49e6-9e71-84d50afacb29" class="">7. Import csv to Datawrapper</h3><ul id="9af498d6-ea03-4967-852b-82508823aac8" class="bulleted-list"><li>Go to the <mark class="highlight-blue"><a href="https://app.datawrapper.de/map/fUSq3/visualize">Datawrapper page</a></mark>. Hit <mark class="highlight-orange">Add your data</mark>.</li></ul><ul id="5dfaf068-b57d-4cb8-b709-5ff9784357dd" class="bulleted-list"><li>Click on <mark class="highlight-orange">Import your dataset - Start Import - Alternatively, click here to upload a CSV-file. </mark></li></ul><ul id="82f8dfcb-667d-4c06-acae-f1c42a6e35ab" class="bulleted-list"><li>Choose the csv file you just downloaded from Google Sheets. Keep hitting next or continue or go. No need to change anything here. Then hit <mark class="highlight-orange">Proceed</mark>. </li></ul><ul id="3e4cf182-1ce2-4a94-a58c-1478acf7f7f8" class="bulleted-list"><li>The only thing you need to do before publishing is hit the dropdown menu in Color palette and choose <mark class="highlight-orange">features__properties__positive</mark></li></ul><p id="c2048f35-7e91-4ff4-bea3-5ac236d7fa3e" class="">
-</p><figure id="e8fadc25-52c1-4575-95ee-c2e5d286436f" class="image"><a href="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.27.08_PM.png"><img style="width:806px" src="https://s3.amazonaws.com/new_videos/multimedia_assets/map_tutorial/Screen_Shot_2020-03-27_at_2.27.08_PM.png"/></a></figure><p id="0d52e2d8-c348-4a6b-824c-2e393272e1b2" class="">
-</p><p id="a13607f9-d707-4dc2-8ea9-a28e016b1f66" class="">
-</p><h3 id="5b12d3fd-8442-4895-8a04-28c21a9ffc8d" class="">8<strong>. Publish and update</strong></h3><ul id="93117bb4-e596-48f8-85ad-d383ce1444d1" class="bulleted-list"><li>Hit <mark class="highlight-orange">Proceed - Proceed - Publish - Re-publish chart</mark>.<mark class="highlight-orange"> </mark></li></ul><ul id="90dd1756-18f0-40dd-ae1a-aeeeb756d3ed" class="bulleted-list"><li>Hit <mark class="highlight-orange">Copy Embed code</mark> and go to <mark class="highlight-blue"><a href="https://www.arkansasonline.com/admin/flatpages/flatpage/6908/">https://www.arkansasonline.com/admin/flatpages/flatpage/6908/</a></mark></li></ul><ul id="607f3734-27ed-4295-8a75-b828e8a77b73" class="bulleted-list"><li>Do a Command+F text search of <mark class="highlight-orange">Arkansas&#x27; covid-19 cases NEW</mark>. I commented on where the code starts and ends. Just replace the code in between with the new embed code. </li></ul><ul id="2e2e7daa-c049-4005-8355-f413fe3d1bc0" class="bulleted-list"><li>Update total confirmed cases, deaths, recoveries and negative tests, which are right beneath the Arkansas map. If you cannot find it, do a text search with the old numbers. Also update the timestamp. Search for "UPDATED" and you will find it. </li></ul><ul id="664ab896-cf51-4f28-be8e-57b5c37e458a" class="bulleted-list"><li>Hit <mark class="highlight-orange">Save and continue editing</mark> and you are done.  </li></ul></div></article></body></html>
+</style></head><body><article id="0a905b0e-9f86-46e4-8128-1bbe2e9f077b" class="page sans"><header><h1 class="page-title">Copy of How to update Arkansas covid-19 map</h1></header><div class="page-body"><h3 id="e46b567f-efed-4d1a-b059-3facd3141962" class="">1. Go to this <a href="https://services.arcgis.com/PwY9ZuZRDiI5nXUB/ArcGIS/rest/services/ADH_COVID19_Positive_Test_Results/FeatureServer/0/query?where=0%3D0&amp;objectIds=&amp;time=&amp;geometry=&amp;geometryType=esriGeometryEnvelope&amp;inSR=&amp;spatialRel=esriSpatialRelIntersects&amp;resultType=none&amp;distance=0.0&amp;units=esriSRUnit_Meter&amp;returnGeodetic=false&amp;outFields=*&amp;returnGeometry=false&amp;returnCentroid=false&amp;featureEncoding=esriDefault&amp;multipatchOption=xyFootprint&amp;maxAllowableOffset=&amp;geometryPrecision=&amp;outSR=&amp;datumTransformation=&amp;applyVCSProjection=false&amp;returnIdsOnly=false&amp;returnUniqueIdsOnly=false&amp;returnCountOnly=false&amp;returnExtentOnly=false&amp;returnQueryGeometry=false&amp;returnDistinctValues=false&amp;cacheHint=false&amp;orderByFields=&amp;groupByFieldsForStatistics=&amp;outStatistics=&amp;having=&amp;resultOffset=&amp;resultRecordCount=&amp;returnZ=false&amp;returnM=false&amp;returnExceededLimitFeatures=true&amp;quantizationParameters=&amp;sqlFormat=none&amp;f=pgeojson&amp;token=">data page</a>:</h3><p id="fba71778-da23-4e22-ae17-e31566ccee1a" class="">
+</p><p id="ebaf6d39-7513-423b-b5d8-5e0b90089117" class="block-color-blue">
+</p><h3 id="a475a9ca-ce0c-404b-8975-d3269f4a9538" class="">2. Convert json file to csv</h3><ul id="fac0cd66-c098-4387-89ee-855c9c4821e1" class="bulleted-list"><li>That link directs you to a json file. To convert that to a csv file that we can import to datawrapper, go to: <mark class="highlight-blue"><a href="http://arkansasonline.com/json">arkansasonline.com/json/</a></mark></li></ul><ul id="749bd4d8-6362-4e6c-9e8a-69634c5147b5" class="bulleted-list"><li>Copy that long url and paste it into the text box</li></ul><ul id="f5c2ab05-17f0-4be8-b875-5d7e0a40909d" class="bulleted-list"><li>Then hit &quot;DOWNLOAD CSV&quot;</li></ul><ul id="489205ad-8627-4178-8d07-c31900fa12e8" class="bulleted-list"><li>You will get a result.csv file</li></ul><p id="00064bca-c9b3-4c80-9af5-a62682c8c77f" class="">
+</p><p id="10e0a29c-e555-4365-bba8-e6f592da5f96" class="">
+</p><h3 id="fc9739be-3de5-4224-bbb4-470ab4b9d319" class="">3. Upload your csv to GitHub</h3><ul id="e0f6814a-3492-4524-ba36-d994db16a631" class="bulleted-list"><li>Go to our GitHub repository, where we store our data: <mark class="highlight-blue"><a href="https://github.com/adgnewsroom/virus-tracker">https://github.com/adgnewsroom/virus-tracker</a></mark></li></ul><ul id="d81fd40f-9c67-4855-9a25-f0ae02c156d8" class="bulleted-list"><li>Sign in by clicking on the sign in button on the top right corner. The email address is  <a href="mailto:arkdgwebreleases@gmail.com">arkdgwebreleases@gmail.com</a> I&#x27;ve shared the password on slack. Ask me if you need it.</li></ul><ul id="fe359b22-528e-4e4f-8156-47fa350658e9" class="bulleted-list"><li>Click on  &quot;Upload files.&quot; Choose your result.csv file. <mark class="highlight-red"><strong>Make sure the file name is exactly result.csv otherwise it will not update. </strong></mark></li></ul><figure id="6a8fe5ad-b066-4fa7-830a-f6c6b3ccd03a" class="image"><a href="Copy%20of%20How%20to%20update%20Arkansas%20covid%2019%20map/Screen_Shot_2020-04-16_at_1.04.04_PM.png"><img style="width:1994px" src="Screen_Shot_2020-04-16_at_1.04.04_PM.png"></a></figure><ul id="a37345ff-f3b4-48f6-a0fa-f13f5e3d1008" class="bulleted-list"><li>Under &quot;Commit changes,&quot; put whatever you like in the first textbox. I usually just say update. It&#x27;s just a line of text helping you keep track of your commits, which isn&#x27;t that important in our case since all we do is updating our datasets. And then hit &quot;Commit changes.&quot;</li></ul><figure id="9e1d68a0-9bf9-44f6-90dc-3327249d51dc" class="image"><a href="Copy%20of%20How%20to%20update%20Arkansas%20covid%2019%20map/Screen_Shot_2020-04-16_at_1.06.10_PM.png"><img style="width:2002px" src="Screen_Shot_2020-04-16_at_1.06.10_PM.png"></a></figure><p id="f75d1086-d304-41bb-93ae-929b5983f367" class="">
+</p><p id="1fa89a6e-cd32-496d-9e6f-61244172e74a" class="">
+</p><h3 id="eaafaafc-3146-4e11-a7cb-74c2218fbca7" class="">4. Working with &quot;Missing County Info&quot;</h3><ul id="532b3a57-f98f-4224-b00d-ac9cc8741761" class="bulleted-list"><li>The result.csv file has a lot of columns, but just pay attention to the following two, the county name and the number of positive cases. They should be the F and I respectively:</li></ul><ol id="6bea22ae-7659-4b9d-847e-47e2b4ccefa6" class="block-color-orange numbered-list" start="1"><li>features__properties__county_nam</li></ol><ol id="b537fe5c-214a-4b41-b2fd-8dd21784e517" class="block-color-orange numbered-list" start="2"><li>features__properties__positive</li></ol><ul id="7c47459b-bb8b-4d43-a59b-1b352ed6468d" class="bulleted-list"><li>Notice the county name cell of the first row says <mark class="highlight-orange"><strong>Missing County Info</strong></mark><strong>. </strong>Assuming that means the state department cannot identify where the cases are, we want to reflect that in our map. </li></ul><ul id="0b7f0157-cdad-45c6-9028-e4bce7f381a1" class="bulleted-list"><li>Go to the flat page: <mark class="highlight-blue"><a href="https://www.arkansasonline.com/admin/flatpages/flatpage/6908/">https://www.arkansasonline.com/admin/flatpages/flatpage/6908/</a></mark></li></ul><ul id="acf8fd77-f4da-4c14-8717-27775ec53242" class="bulleted-list"><li>Do a text search on &quot;missing county&quot; You should see two matching results, one for the Arkansas map and one for the national map. Change the number for the Arkansas map if there is a change. The national map usually has thousands of cases without county info. </li></ul><p id="c8e5de64-1cb0-47c7-a204-4a3b7a261dd0" class="">
+</p></div></article></body></html>
